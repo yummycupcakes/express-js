@@ -1,0 +1,9 @@
+TESTING APP.JS
+
+describe('Test the port and database connection', () => {
+  it('should connect to the database and listen to port 5000', () => {
+    expect(port).toBe(5000);
+    expect(mongoose.set("strictQuery")).toBeTruthy();
+    expect(mongoose.connect(process.env.MONGO_URL)).resolves;
+  });
+});
