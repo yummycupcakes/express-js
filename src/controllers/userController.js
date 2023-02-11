@@ -7,7 +7,7 @@ export const getAllUser = async (req, res, next) => {
   try {
     users = await User.find();
   } catch (err) {
-    console.log(err);
+    return console.log(err);
   }
 
   if (!users) return res.status(404).json({ message: "No users found!" });
@@ -37,6 +37,7 @@ export const signup = async (req, res, next) => {
     name,
     email,
     password: hashedPassword,
+    blogs: [],
   });
 
   try {
