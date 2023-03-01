@@ -7,7 +7,7 @@ import {
   getBlogById,
   updateBlog,
   getUserById,
-} from "../controllers/blogController";
+} from "../controllers/blogController.js";
 
 blogRouter.get("/", getAllBlogs);
 blogRouter.get("/:id", getBlogById);

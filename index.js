@@ -2,11 +2,11 @@ import express from "express";
 import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
-import router from "./src/routes/userRoutes";
-import blogRouter from "./src/routes/blogRoutes";
+import router from "./src/routes/userRoutes.js";
+import blogRouter from "./src/routes/blogRoutes.js";
 
 // port
-const port = 5000;
+const port = 8000;
 
 // rest object
 const app = express();
